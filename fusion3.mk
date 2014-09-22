@@ -57,7 +57,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
-    $(COMMON_PATH)/rootdir/fstab.qcom:recovery/root/fstab.qcom
+    $(COMMON_PATH)/rootdir/fstab.qcom:recovery/root/fstab.qcom \
+    $(COMMON_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+
+# Post recovery boot script
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
 # Prima wifi config
 PRODUCT_COPY_FILES += \
